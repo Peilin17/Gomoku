@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_0"
+        android:itemBackground="@color/menu1"
+        android:title="Change Background"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_1"
+        android:title="Saved Game"
+        android:itemBackground="@color/menu2"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_3"
+        android:itemBackground="@color/menu4"
+        android:title="Clean cache"
+        app:showAsAction="never"/>
+
+</menu>

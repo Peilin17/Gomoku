@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/startingLayout"
+    android:gravity="center"
+    tools:context=".StartingPage">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="224dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="65dp"
+        android:src="@drawable/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/ripple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:mrl_rippleColor="#D2970606"
+        app:mrl_rippleOverlay="true">
+
+        <Button
+            android:id="@+id/start_pve_button"
+            android:layout_width="192dp"
+            android:layout_height="52dp"
+            android:background="@drawable/pve_button_image"/>
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/ripple2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ripple"
+        app:mrl_rippleColor="#D2970606"
+        app:mrl_rippleOverlay="true">
+    <Button
+        android:id="@+id/start_pvp_button"
+        android:layout_width="192dp"
+        android:layout_height="52dp"
+        android:background="@drawable/pvp_button_image"/>
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/ripple3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ripple2"
+        app:mrl_rippleColor="#D2970606"
+        app:mrl_rippleOverlay="true">
+    <Button
+        android:id="@+id/start_online_button"
+        android:layout_width="192dp"
+        android:layout_height="52dp"
+        android:background="@drawable/online_button_image"/>
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

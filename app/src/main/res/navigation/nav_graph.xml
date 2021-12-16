@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startingPage">
+
+    <fragment
+        android:id="@+id/startingPage"
+        android:name="com.example.gomoku.StartingPage"
+        android:label="fragment_starting_page"
+        tools:layout="@layout/fragment_starting_page" >
+        <action
+            android:id="@+id/action_startingPage_to_changeBg"
+            app:destination="@id/changeBg" />
+        <action
+            android:id="@+id/action_startingPage_to_pvEPage"
+            app:destination="@id/pvEPage" />
+        <action
+            android:id="@+id/action_startingPage_to_matchHistoryList"
+            app:destination="@id/matchHistoryList" />
+        <action
+            android:id="@+id/action_startingPage_to_pvPPage"
+            app:destination="@id/pvPPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/pvEPage"
+        android:name="com.example.gomoku.PvEPage"
+        android:label="fragment_pv_e_page"
+        tools:layout="@layout/fragment_pv_e_page" >
+        <action
+            android:id="@+id/action_pvEPage_to_matchHistoryList"
+            app:destination="@id/matchHistoryList" />
+    </fragment>
+    <fragment
+        android:id="@+id/pvPPage"
+        android:name="com.example.gomoku.PvPPage"
+        android:label="fragment_pv_p_page"
+        tools:layout="@layout/fragment_pv_p_page" >
+        <action
+            android:id="@+id/action_pvPPage_to_matchHistoryList"
+            app:destination="@id/matchHistoryList" />
+    </fragment>
+    <fragment
+        android:id="@+id/matchHistoryList"
+        android:name="com.example.gomoku.MatchHistoryList"
+        android:label="fragment_match_history_list"
+        tools:layout="@layout/fragment_match_history_list" >
+        <action
+            android:id="@+id/action_matchHistoryList_to_matchHistory"
+            app:destination="@id/matchHistory" />
+    </fragment>
+    <fragment
+        android:id="@+id/matchHistory"
+        android:name="com.example.gomoku.MatchHistory"
+        android:label="fragment_match_history"
+        tools:layout="@layout/fragment_match_history" >
+        <action
+            android:id="@+id/action_matchHistory_to_pvPPage"
+            app:destination="@id/pvPPage"
+            app:popUpTo="@id/startingPage" />
+
+        <action
+            android:id="@+id/action_matchHistory_to_pvEPage"
+            app:destination="@id/pvEPage"
+            app:popUpTo="@id/startingPage" />
+        <action
+            android:id="@+id/action_matchHistory_to_matchHistoryList"
+            app:destination="@id/matchHistoryList" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeBg"
+        android:name="com.example.gomoku.ChangeBg"
+        android:label="fragment_change_bg"
+        tools:layout="@layout/fragment_change_bg" />
+</navigation>
